@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import HomeContainer from '@/containers/home';
 
 function HomePage() {
   return (
-    <div>Home</div>
+    <div>
+      <HomeContainer />
+    </div>
   )
 }
 
