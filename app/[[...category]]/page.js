@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeContainer from '@/containers/home';
 import {
+    fetchMovieApi,
     getSingleCategory,
     getCategories,
     getPopularMovies,
@@ -10,7 +11,11 @@ import {
 async function HomePage({ params }) {
     let selectedCategory;
 
-    const [{ results: topRatedMovies }, { results: popularMovies }, { genres: categories }] = await Promise.all([
+    const [
+        { results: topRatedMovies },
+        { results: popularMovies },
+        { genres: categories }
+    ] = await Promise.all([
         getTopRatedMovies(),
         getPopularMovies(),
         getCategories()
