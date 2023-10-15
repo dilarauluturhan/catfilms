@@ -21,8 +21,7 @@ async function HomePage({ params }) {
         getCategories()
     ]);
 
-    // optional catch all router olduğu için birden fazla length'i var
-    // 0.'yı almak istiyorum
+    // optional catch all router olduğu için birden fazla length'i var, 0.'yı almak istiyorum
     if (params.category?.length > 0) {
         const { results } = await getSingleCategory(params.category[0]);
         selectedCategory = results;
