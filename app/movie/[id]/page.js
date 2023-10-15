@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import MovieContainer from '@/containers/movie';
 import { getMovie } from '@/services/movie';
 
-async function MoviePage({ params, searchParams }) {
+async function MoviePage({ params }) {
     const movieDetail = await getMovie(params.id);
 
     if (!movieDetail) {
