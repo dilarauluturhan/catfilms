@@ -1,20 +1,37 @@
 import React from 'react';
 import HomeContainer from '@/containers/home';
-import Movies from '@/mocks/movies.json';
+import {
+    getSingleCategory,
+    getCategories,
+    getPopularMovies,
+    getTopRatedMovies
+} from '@/services/movie';
 
-function HomePage({ params }) {
+async function HomePage({ params }) {
     let selectedCategory;
 
+    const [{ results: topRatedMovies }, { results: popularMovies }, { genres: categories }] = await Promise.all([
+        getTopRatedMovies(),
+        getPopularMovies(),
+        getCategories()
+    ]);
+
+    // optional catch all router olduğu için birden fazla length'i var
+    // 0.'yı almak istiyorum
     if (params.category?.length > 0) {
-        selectedCategory = true;
-    }
+        const { results } = await getSingleCategory(params.category[0]);
+        selectedCategory = results;
+    };
 
     return (
         <div>
             <HomeContainer
+                topRatedMovies={topRatedMovies}
+                popularMovies={popularMovies}
+                categories={categories}
                 selectedCategory={{
                     id: params.category?.[0] ?? '',
-                    movies: selectedCategory ? Movies.results.slice(0, 7) : [],
+                    movies: selectedCategory ? selectedCategory.slice(0, 7) : [],
                 }} />
         </div>
     )
