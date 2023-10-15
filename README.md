@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <h1 align="center">CATFILMS</h1>
+</div>
+
+## About The Project
+![](https://github.com/dilarauluturhan/catfilms/assets/120499369/6687998d-153a-41d1-85e9-e1cccd41b68d)
+
+## Features
+**Catfilms** is a movie site where you can access movies from many categories. You can get information about popular movies and favorite movies with the data I fetch from TMDB API.
+
+## Built With
+- **Nextjs**: For building the user interface.
+- **TMDB API**: For fetch movie data.
+- **React Icons**: For display the logo icon throughout the application.
 
 ## Getting Started
+To get the project up and running on your local machine, follow these steps:
 
-First, run the development server:
-
-```bash
+Clone the repository:
+````
+git clone https://github.com/dilarauluturhan/catfilms.git
+````
+Go to the project directory:
+````
+cd catfilms
+````
+Start the application:
+````
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+````
+Go to `http://localhost:3000` in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact With
+Dilara Uluturhan - [LinkedIn](https://www.linkedin.com/in/dilarauluturhan/) - dilarauluturhan@outlook.com
